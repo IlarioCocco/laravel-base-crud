@@ -17,7 +17,6 @@
       <th scope="col">Action</th>
     </tr>
   </thead>
-
   <tbody>
     @foreach ($comics as $comic)
         <tr>
