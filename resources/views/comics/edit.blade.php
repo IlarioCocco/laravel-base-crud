@@ -4,10 +4,11 @@
 <h1 class="text-danger">Modifica Fumetto: {{$comic["title"]}}</h1>
 
 {{-- il form dev essere provvisto di action di spedizione verso store, metodo POST --}}
-<form action="{{route("comics.store")}}" method="POST">
+<form action="{{route("comics.update", $comic["id"])}}" method="POST">
 
 {{-- @csrf = token di inserimento dati personale, SICUREZZA --}}
     @csrf
+    @method("PUT")
 
     <div class="form-group">
         <label for="title">Titolo</label>
