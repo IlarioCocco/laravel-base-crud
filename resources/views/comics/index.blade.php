@@ -14,8 +14,9 @@
       <th scope="col">Prezzo</th>
       <th scope="col">Data</th>
       <th scope="col">Tipo</th>
-      <th scope="col">Action</th>
-      <th scope="col">Action</th>
+      <th scope="col">Action - CR</th>
+      <th scope="col">Action - U</th>
+      <th scope="col">Action - D</th>
     </tr>
   </thead>
   <tbody>
@@ -31,7 +32,14 @@
               <a href="{{route("comics.show", $comic["id"])}}"><button type="button" class="btn btn-primary">Visualizza</button></a>
             </td> 
             <td>
-              <a href="{{route("comics.edit", $comic["id"])}}"><button type="button" class="btn btn-danger">Modifica</button></a>
+              <a href="{{route("comics.edit", $comic["id"])}}"><button type="button" class="btn btn-success">Aggiorna</button></a>
+            </td>
+            <td>
+              <form action="{{route("comics.destroy", $comic["id"])}}" method="POST">
+                @csrf
+                @method("DELETE")
+                  <button type="submit" class="btn btn-danger">Cancella</button></a>
+              </form>
             </td>
           </tr>
     @endforeach
