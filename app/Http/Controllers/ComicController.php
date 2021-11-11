@@ -59,8 +59,10 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    //N. B. HO USATO LA DEPENDENCY INJECTION !!!
+     
+     //N. B. HO USATO LA DEPENDENCY INJECTION IN ALTERNATIVA USO $id !!!
     public function show(Comic $comic)
+    //N. B. HO USATO LA DEPENDENCY INJECTION IN ALTERNATIVA USO $id; vedi sotto find($id)!!!
     {
         // $comic = Comic::find($id);
         // dd($comic);
