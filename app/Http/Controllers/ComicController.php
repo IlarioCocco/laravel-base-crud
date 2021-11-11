@@ -39,15 +39,19 @@ class ComicController extends Controller
     {
         $data = $request->all();
 
-        $newComic = new Comic();
-        $newComic->title = $data["title"];
-        //    $newComic->description = $comic["description"];
-        $newComic->thumb = $data["thumb"];
-        $newComic->price = $data["price"];
-        //    $newComic->series = $comic["series"];
-        $newComic->date = $data["date"];
-        $newComic->type = $data["type"];
-        $newComic->save();
+        // $newComic = new Comic();
+        // $newComic->title = $data["title"];
+        // //    $newComic->description = $comic["description"];
+        // $newComic->thumb = $data["thumb"];
+        // $newComic->price = $data["price"];
+        // //    $newComic->series = $comic["series"];
+        // $newComic->date = $data["date"];
+        // $newComic->type = $data["type"];
+        // $newComic->save();
+
+
+        // assegnazione massiva
+        $newComic = Comic::create($data);
         
         return redirect()->route("comics.show", $newComic->id );
         // $newComic =  Comic::create($data);

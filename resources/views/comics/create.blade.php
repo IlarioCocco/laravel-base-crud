@@ -3,7 +3,10 @@
 
 <h1 class="text-danger">Inserisci un Fumetto</h1>
 
+{{-- il form dev essere provvisto di action di spedizione verso store, metodo POST --}}
 <form action="{{route("comics.store")}}" method="POST">
+
+{{-- @csrf = token di inserimento dati personale, SICUREZZA --}}
     @csrf
 
     <div class="form-group">
