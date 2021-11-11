@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comic extends Model
 {
-    protected $table = "comics";
-    // protected $fillable = [];
+    // protected $table = "comics";
+    // assegnazione massiva
+    protected $fillable = ["title", "thumb", "price", "date", "type"];
 }
