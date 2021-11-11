@@ -10,8 +10,13 @@
 </head>
     <body>
         @include('partials.header')
-        @yield('pageContent')
 
+        <main>
+            <div class="container">
+                @yield('pageContent')
+            </div>
+        </main>
+      
         
 
         <script src="{{asset("js/app.js")}}"></script>
