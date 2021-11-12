@@ -35,10 +35,10 @@
               <a href="{{route("comics.edit", $comic["id"])}}"><button type="button" class="btn btn-success">Aggiorna</button></a>
             </td>
             <td>
-              <form action="{{route("comics.destroy", $comic["id"])}}" method="POST">
+              <form action="{{route("comics.destroy", $comic["id"])}}" method="POST"  onsubmit="return confirm('Vuoi veramente Cancellare il Comics?');">
                 @csrf
                 @method("DELETE")
-                  <button type="submit" class="btn btn-danger">Cancella</button></a>
+                  <button type="submit" class="btn btn-danger" value="Elabora/Cancella" class="bottone-cancella" >Cancella</button>
               </form>
             </td>
           </tr>
